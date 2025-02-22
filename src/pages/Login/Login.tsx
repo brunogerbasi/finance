@@ -1,24 +1,27 @@
+
 import { useState } from 'react'
 import { Container, Form, Title, Input, Button, RegisterText, StyledLink } from './Login.styles'
-import useUserStore from '../../store/userStore'
 import { useNavigate } from 'react-router-dom'
+import useUserStore from '../../store/userStore'
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  
+
   const storedUser = useUserStore((state) => state.user)
+  const login = useUserStore((state) => state.login)
   const navigate = useNavigate()
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    if (!storedUser) {
+    if (!storedUser || !storedUser.email) {
       alert('Nenhum usuário registrado. Por favor, cadastre-se!')
       return
     }
 
     if (storedUser.email === email && storedUser.password === password) {
+      login() 
       alert('Login realizado com sucesso!')
       navigate('/dashboard')
     } else {

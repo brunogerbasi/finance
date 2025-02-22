@@ -1,4 +1,3 @@
-
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
@@ -10,19 +9,24 @@ interface User {
 
 interface UserStore {
   user: User | null
+  isLoggedIn: boolean
   setUser: (user: User) => void
-  clearUser: () => void
+  login: () => void
+  logout: () => void
 }
 
-const useUserStore = create<UserStore, [['zustand/persist', UserStore]]>(
+const useUserStore = create<UserStore>()(
   persist(
     (set) => ({
       user: null,
-      setUser: (user: User) => set({ user }),
-      clearUser: () => set({ user: null })
+      isLoggedIn: false,
+      setUser: (user: User) => set({ user }), 
+      login: () => set({ isLoggedIn: true }),
+      logout: () => set({ isLoggedIn: false }),
     }),
     {
-      name: 'user-storage' 
+      name: 'user-storage', 
+      partialize: (state) => ({ user: state.user }),
     }
   )
 )

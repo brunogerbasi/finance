@@ -7,9 +7,9 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
-  const user = useUserStore((state) => state.user)
+  const isLoggedIn = useUserStore((state) => state.isLoggedIn)
 
-  if (!user) {
+  if (!isLoggedIn) {
     return <Navigate to="/" replace />
   }
 
