@@ -1,8 +1,12 @@
 
 import { useState } from 'react'
-import { Container, Form, Title, Input, Button, RegisterText, StyledLink } from './Login.styles'
+import { ContainerLogin, Form, LoginColLeft, LoginColRight, LoginLeftContent, LoginLogo, LoginRightContent, LoginSubtitle, LoginTitle, RegisterText, StyledLink } from './Login.styles'
 import { useNavigate } from 'react-router-dom'
 import useUserStore from '../../store/userStore'
+import ButtonPrimary from '../../components/layout/Button/Button'
+import Input from '../../components/layout/Input/Input'
+import Label from '../../components/layout/Label/Label'
+import Logo from './../../assets/images/logo.svg'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -30,33 +34,45 @@ const Login = () => {
   }
 
   return (
-    <Container>
-      <Form onSubmit={handleSubmit}>
-        <Title>Login</Title>
-        <label htmlFor="email">Email</label>
-        <Input
-          type="email"
-          id="email"
-          value={email}
-          placeholder="Digite seu email"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="password">Senha</label>
-        <Input
-          type="password"
-          id="password"
-          value={password}
-          placeholder="Digite sua senha"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <Button type="submit">Entrar</Button>
-        <RegisterText>
-          Não tem cadastro? <StyledLink to="/register">Registre-se</StyledLink>
-        </RegisterText>
-      </Form>
-    </Container>
+    <ContainerLogin>
+      <LoginColLeft>
+        <LoginLeftContent>
+          <LoginLogo src={Logo} />
+          <Form onSubmit={handleSubmit}>
+            {/* <Title>Login</Title> */}
+            <Label htmlFor="email">E-mail</Label>
+            <Input
+              type="email"
+              id="email"
+              value={email}
+              placeholder="Digite seu email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <Label htmlFor="password">Senha</Label>
+            <Input
+              type="password"
+              id="password"
+              value={password}
+              placeholder="Digite sua senha"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <ButtonPrimary type="submit">Entrar</ButtonPrimary>
+            <RegisterText>
+              Não tem cadastro? <StyledLink to="/register">Registre-se</StyledLink>
+            </RegisterText>
+          </Form>
+        </LoginLeftContent>
+        
+      </LoginColLeft>
+      <LoginColRight>
+        <LoginRightContent>
+          <LoginTitle>Investimentos com Precisão</LoginTitle>
+          <LoginSubtitle>Cotações, ações e insights para você investir com inteligência e conquistar seu futuro</LoginSubtitle>
+        </LoginRightContent>        
+      </LoginColRight>      
+    </ContainerLogin>
   )
 }
 
