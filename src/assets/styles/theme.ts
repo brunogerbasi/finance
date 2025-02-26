@@ -4,11 +4,15 @@ const theme = {
   colors: {
     primary: '#06BD92',
     secondary: '#4FFEA6',
-    background: '#f5f5f5',
+    background: '#ffffff',
     surface: '#ffffff',
     error: '#dc3545',
     text: '#333333',
-    textSecondary: '#666666'
+    textSecondary: '#666666',
+    placeholder: '#BDBDBD',
+
+    textLigth: '#ffffff',
+    borderInput: '#ededed'
   },
   typography: {
     h1: rem(40),    
@@ -23,12 +27,8 @@ const theme = {
     md: rem(16),  
     lg: rem(24),  
     xl: rem(32)   
-  },
-  breakpoints: {
-    mobile: rem(480),  
-    tablet: rem(768),  
-    desktop: rem(1024) 
   }
+  
 }
 
 export default theme
