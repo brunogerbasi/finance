@@ -10,8 +10,8 @@ interface DataPoint {
 }
 
 interface CurrencyProps {
-  currencyKey: string  // ex: "USD", "EUR", etc.
-  currencyName: string // Nome da moeda para exibição
+  currencyKey: string  
+  currencyName: string 
   onClose: () => void
 }
 
@@ -19,7 +19,7 @@ const Currency: React.FC<CurrencyProps> = ({ currencyKey, currencyName, onClose 
   const [chartData, setChartData] = useState<DataPoint[]>([])
 
   useEffect(() => {
-    // Função que atualiza o gráfico com o valor atual da moeda selecionada
+    
     const updateChartData = async () => {
       try {
         const data = await fetchFinanceData()
@@ -34,10 +34,9 @@ const Currency: React.FC<CurrencyProps> = ({ currencyKey, currencyName, onClose 
         console.error('Erro ao atualizar dados do gráfico:', error)
       }
     }
-
-    // Atualiza a cada 1 segundo
+   
     const intervalId = setInterval(updateChartData, 10000)
-    // Obtenha um dado logo no início
+    
     updateChartData()
 
     return () => clearInterval(intervalId)

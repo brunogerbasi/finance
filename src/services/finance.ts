@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_URL = 'https://api.hgbrasil.com/finance/?key=3490b54b&format=json-cors'
+const hgAPI = import.meta.env.VITE_API_KEY
+const API_URL = `https://api.hgbrasil.com/finance/?key=${hgAPI}&format=json-cors`
 
 export interface Currency {
   name: string

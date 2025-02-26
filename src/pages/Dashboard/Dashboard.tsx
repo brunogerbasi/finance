@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
       <Title>Cotações</Title>
       <QuoteList>
         {Object.entries(currencies)
-          .filter(([key]) => key !== 'source') // ignora a propriedade "source"
+          .filter(([key]) => key !== 'source') 
           .map(([key, currency]) => (
             <QuoteItem
               key={key}
