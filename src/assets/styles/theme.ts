@@ -27,12 +27,8 @@ const theme = {
     md: rem(16),  
     lg: rem(24),  
     xl: rem(32)   
-  },
-  breakpoints: {
-    mobile: rem(480),  
-    tablet: rem(768),  
-    desktop: rem(1024) 
   }
+  
 }
 
 export default theme
