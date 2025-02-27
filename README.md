@@ -1,10 +1,13 @@
 # Finances
 
-Projeto React com TypeScript utilizando Vite.
+Projeto React com TypeScript.
 
 ## Visão Geral
 
 Este projeto foi criado com React com TypeScript para oferecer uma base moderna e performática para aplicações web. O ESLint já está configurado para ajudar a manter a consistência e qualidade do código.
+
+## Logo Figma
+<https://www.figma.com/design/BcFlpw3mpsOomJMvKqwSNB/BG-Finance?node-id=0-1&p=f&t=kt1umOid6FA293Jt-0>
 
 ## Pré-requisitos
 
@@ -22,48 +25,35 @@ Este projeto foi criado com React com TypeScript para oferecer uma base moderna 
 
 
 2. **Entre no diretório do projeto:**
-
-cd finances
+   
+   cd finances
 
 3. **Instale as dependências:**
 
-yarn install
-ou
-npm install
+   yarn install
+   ou
+   npm install
 
 
 ### Iniciar o Servidor de Desenvolvimento
 
-yarn dev
-ou
-npm run dev
+   yarn dev
+   ou
+   npm run dev
 
-**Após iniciar, abra o navegador e acesse a URL exibida (geralmente http://localhost:3000).**
+**Após iniciar, abra o navegador e acesse a URL exibida.**
 
 
 ### Executar o Linter (ESLint)
 
-yarn lint
-ou
-npm run lint
+   yarn lint
+   ou
+   npm run lint
 
 
-### Estrutura do Projeto
+### Executar o StoryBook
 
-finances/
-├── node_modules/          # Dependências do projeto
-├── public/                # Arquivos públicos (ex: index.html)
-├── src/                   # Código fonte
-│   ├── assets/            # Recursos estáticos (imagens, fontes)
-│   ├── components/        # Componentes reutilizáveis
-│   ├── context/           # Contexto global (Redux, Zustand ...)
-│   ├── pages/             # Páginas da aplicação
-│   ├── hooks/             # Hooks customizados
-│   ├── services/          # Integração com APIs e lógica de negócios
-│   ├── utils/             # Funções utilitárias
-│   ├── App.tsx            # Componente raiz
-│   └── main.tsx           # Ponto de entrada da aplicação
-├── .eslintignore          # Arquivos e pastas ignorados pelo ESLint
-├── eslint.config.js       # Configuração do ESLint
-├── package.json           # Gerenciador de dependências e scripts
-└── README.md              # Este arquivo
+   yarn storybook
+   ou
+   npm run storybook
+
