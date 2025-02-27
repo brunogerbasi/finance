@@ -1,10 +1,13 @@
 # Finances
 
-Projeto React com TypeScript utilizando Vite.
+Projeto React com TypeScript.
 
 ## Visão Geral
 
 Este projeto foi criado com React com TypeScript para oferecer uma base moderna e performática para aplicações web. O ESLint já está configurado para ajudar a manter a consistência e qualidade do código.
+
+## Logo Figma
+<https://www.figma.com/design/BcFlpw3mpsOomJMvKqwSNB/BG-Finance?node-id=0-1&p=f&t=kt1umOid6FA293Jt-0>
 
 ## Pré-requisitos
 
@@ -38,7 +41,7 @@ Este projeto foi criado com React com TypeScript para oferecer uma base moderna 
    ou
    npm run dev
 
-**Após iniciar, abra o navegador e acesse a URL exibida (geralmente http://localhost:3000).**
+**Após iniciar, abra o navegador e acesse a URL exibida.**
 
 
 ### Executar o Linter (ESLint)
@@ -47,4 +50,10 @@ Este projeto foi criado com React com TypeScript para oferecer uma base moderna 
    ou
    npm run lint
 
+
+### Executar o StoryBook
+
+   yarn storybook
+   ou
+   npm run storybook
 

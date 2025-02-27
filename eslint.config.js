@@ -18,6 +18,7 @@ export default [
     },
     rules: {
       "react/react-in-jsx-scope": "off",
+      '@typescript-eslint/no-explicit-any': 'off',
       semi: ["error", "never"],
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
       indent: ["error", 2]
