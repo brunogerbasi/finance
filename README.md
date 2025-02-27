@@ -6,6 +6,9 @@ Projeto React com TypeScript.
 
 Este projeto foi criado com React com TypeScript para oferecer uma base moderna e performática para aplicações web. O ESLint já está configurado para ajudar a manter a consistência e qualidade do código.
 
+## Projeto Vercel
+<https://finance-ecru.vercel.app/>
+
 ## Logo Figma
 <https://www.figma.com/design/BcFlpw3mpsOomJMvKqwSNB/BG-Finance?node-id=0-1&p=f&t=kt1umOid6FA293Jt-0>
 
@@ -19,6 +22,7 @@ Este projeto foi criado com React com TypeScript para oferecer uma base moderna 
 ### Usando Yarn ou NPM
 
 1. **Clone o repositório:**
+   <https://github.com/brunogerbasi/finance>
 
    ```bash
    git clone <https://github.com/brunogerbasi/finance.git>
