@@ -22,6 +22,7 @@ export const StyledLink = styled.span`
   color: ${theme.colors.primary};
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;

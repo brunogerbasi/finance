@@ -12,7 +12,7 @@ const theme = {
     placeholder: '#BDBDBD',
 
     textLigth: '#ffffff',
-    borderInput: '#ededed'
+    borderInput: '#ededed',    
   },
   typography: {
     h1: rem(40),    

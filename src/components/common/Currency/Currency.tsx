@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 
-import { ChartContainer, CloseButton, ChartTitle } from './Currency.styles'
+import { ChartContainer, CloseButton, ChartTitle, CloseIcon, ChartWrapper } from './Currency.styles'
 import { fetchFinanceData } from '../../../services/finance'
 
 interface DataPoint {
@@ -35,7 +35,7 @@ const Currency: React.FC<CurrencyProps> = ({ currencyKey, currencyName, onClose 
       }
     }
    
-    const intervalId = setInterval(updateChartData, 10000)
+    const intervalId = setInterval(updateChartData, 5000)
     
     updateChartData()
 
@@ -44,17 +44,19 @@ const Currency: React.FC<CurrencyProps> = ({ currencyKey, currencyName, onClose 
 
   return (
     <ChartContainer>
-      <CloseButton onClick={onClose}>Fechar</CloseButton>
-      <ChartTitle>{currencyName} - Histórico em Tempo Real</ChartTitle>
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={chartData}>
-          <CartesianGrid stroke="#ccc" />
-          <XAxis dataKey="time" />
-          <YAxis domain={['auto', 'auto']} />
-          <Tooltip />
-          <Line type="monotone" dataKey="value" stroke="#8884d8" dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
+      <ChartWrapper>
+        <CloseButton onClick={onClose}><CloseIcon /></CloseButton>
+        <ChartTitle>{currencyName} - Histórico em Tempo Real</ChartTitle>
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={chartData}>
+            <CartesianGrid stroke="#ccc" />
+            <XAxis dataKey="time" />
+            <YAxis domain={['auto', 'auto']} />
+            <Tooltip />
+            <Line type="monotone" dataKey="value" stroke="#8884d8" dot={false} />
+          </LineChart>
+        </ResponsiveContainer>
+      </ChartWrapper>
     </ChartContainer>
   )
 }

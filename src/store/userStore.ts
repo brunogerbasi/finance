@@ -26,7 +26,9 @@ const useUserStore = create<UserStore>()(
     }),
     {
       name: 'user-storage', 
-      partialize: (state) => ({ user: state.user }),
+      partialize: (state) => ({ 
+        user: state.user 
+      }),
     }
   )
 )
